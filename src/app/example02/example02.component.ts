@@ -10,19 +10,13 @@ export class Example02Component implements OnInit, OnDestroy {
 
   constructor() { }
 
+  // Create a susbcription object
   private mySusbcription: Subscription;
 
   // constructor() { }
 
   // Create simple observable that emits three values
   myObservable$: Observable<number> = of(1, 2, 3);
-
-  // Create observer object
-  // myObserver = {
-  //   next: x => console.log('Observer got a next value: ' + x),
-  //   error: err => console.error('Observer got an error: ' + err),
-  //   complete: () => console.log('Observer got a complete notification')
-  // };
 
   ngOnInit() {
     // Execute with the observer object
@@ -32,7 +26,10 @@ export class Example02Component implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-      this.mySusbcription.unsubscribe();
+    // Destruction of the component
+    this.mySusbcription.unsubscribe();
   }
 
 }
+
+// https://blog.angularindepth.com/the-best-way-to-unsubscribe-rxjs-observable-in-the-angular-applications-d8f9aa42f6a0
