@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ButtonComponent } from '../button.component';
-import { from, of, Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-example01',
@@ -23,7 +23,7 @@ export class Example01Component implements OnInit {
 
   ngOnInit() {
     // Execute with the observer object
-    this.myObservable$.subscribe(item => console.log('Item value: ' + item));
+    this.myObservable$.subscribe(x => console.log('X value: ' + x));
   }
 
 }
