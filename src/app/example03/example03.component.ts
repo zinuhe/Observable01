@@ -8,9 +8,10 @@ import { Observable, Subscription, of } from 'rxjs';
 })
 export class Example03Component implements OnInit, OnDestroy {
 
-  constructor() { }
-
   // Store multiple subscription references in the subscriptions array and unsubscribe all of them during ngOnDestroy
+  // Collect subscriptions using subscription.add() method instead in array of subscriptions.
+
+  constructor() { }
 
   // Create a susbcription object, first approach is better, second one just as example
   private mySusbcriptions01: Subscription = new Subscription();

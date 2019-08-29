@@ -9,7 +9,9 @@ import { Observable, of } from 'rxjs';
 })
 export class Example01Component implements OnInit {
 
-  // constructor() { }
+  // Why Is This A Memory Leak. The component will get destroyed but the subscription will live on
+
+  constructor() { }
 
   // Create simple observable that emits three values
   myObservable$: Observable<number> = of(1, 2, 3);
