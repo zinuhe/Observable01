@@ -13,8 +13,6 @@ export class Example02Component implements OnInit, OnDestroy {
   // Create a susbcription object
   private mySusbcription: Subscription;
 
-  // constructor() { }
-
   // Create simple observable that emits three values
   myObservable$: Observable<number> = of(1, 2, 3);
 
